@@ -7,8 +7,9 @@
     "build": "strapi build",
     "deploy": "strapi deploy",
     "develop": "strapi develop",
-    "start": "strapi start",
-    "strapi": "strapi"
+    "start": "NODE_ENV=production npm install --omit=dev && strapi start",
+    "strapi": "strapi",
+    "healthcheck": "node scripts/healthcheck.js"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.10.2",

@@ -7,6 +7,9 @@ module.exports = ({ env }) => ({
         rejectUnauthorized: false,
       },
     },
-    pool: { min: 0 },
+    pool: {
+      min: 0,
+      max: 5,
+    },
   },
 })
