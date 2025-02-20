@@ -4,7 +4,8 @@
   "info": {
     "singularName": "services",
     "pluralName": "our-services",
-    "displayName": "Services"
+    "displayName": "Services",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,6 +17,11 @@
     },
     "content": {
       "type": "blocks"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.seo"
     }
   }
 }
