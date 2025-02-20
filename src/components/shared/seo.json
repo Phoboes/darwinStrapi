@@ -30,6 +30,16 @@
     "preventIndexing": {
       "type": "boolean",
       "default": false
+    },
+    "favicon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
