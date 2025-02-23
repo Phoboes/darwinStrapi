@@ -1,8 +1,11 @@
 [build]
 builder = "nixpacks"
-buildCommand = "npm install --legacy-peer-deps"
+buildCommand = "npm install"
 
 [deploy]
 startCommand = "npm run start"
 healthcheckPath = "/_health"
-restartPolicyType = "on_failure" 
+restartPolicyType = "on_failure"
+
+[nixpacks]
+node-version = "18" 
