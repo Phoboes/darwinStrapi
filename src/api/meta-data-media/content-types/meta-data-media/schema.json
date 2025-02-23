@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "meta_data_medias",
+  "info": {
+    "singularName": "meta-data-media",
+    "pluralName": "meta-data-medias",
+    "displayName": "metaDataMedia"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "favicon": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "shareImage": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
