@@ -463,6 +463,35 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiMetaDataMediaMetaDataMedia extends Struct.SingleTypeSchema {
+  collectionName: 'meta_data_medias';
+  info: {
+    displayName: 'metaDataMedia';
+    pluralName: 'meta-data-medias';
+    singularName: 'meta-data-media';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    favicon: Schema.Attribute.Media<'images' | 'files'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::meta-data-media.meta-data-media'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    shareImage: Schema.Attribute.Media<'images' | 'files'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiServicesServices extends Struct.SingleTypeSchema {
   collectionName: 'our_services';
   info: {
@@ -1006,6 +1035,7 @@ declare module '@strapi/strapi' {
       'api::about.about': ApiAboutAbout;
       'api::contact.contact': ApiContactContact;
       'api::home.home': ApiHomeHome;
+      'api::meta-data-media.meta-data-media': ApiMetaDataMediaMetaDataMedia;
       'api::services.services': ApiServicesServices;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
